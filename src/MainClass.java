@@ -4,17 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainClass {
-    private static JFrame marco;
-    private static JPanel pnl;
-    private static JLabel eti;
+
     MainClass(){
         muestraGUI();
 
     }
 
     public static void muestraGUI(){
+        JFrame marco = new JFrame("Probando GitHub");
+        JPanel pnl;
+        JLabel eti;
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco = new JFrame("Probando GitHub");
         pnl = new JPanel( new BorderLayout(0,1));
         eti = new JLabel("Hola GitHub!");
         marco.add(pnl);
@@ -26,7 +26,5 @@ public class MainClass {
         javax.swing.SwingUtilities.invokeLater(() -> {
             MainClass main = new MainClass();
         });
-        //muestraGUI();
-        //System.out.println("Hola Git!");
     }
 }
